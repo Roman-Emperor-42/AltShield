@@ -1,0 +1,20 @@
+name: AltShield
+version: '1.21'
+main: com.akatriggered.altShield.AltShield
+api-version: '1.21'
+authors: [ AkaTriggered ]
+description: A plugin to limit alternate accounts by IP
+website: https://github.com/AkaTriggered
+commands:
+  altshield:
+    description: Main command for AltShield plugin
+    usage: /altshield reload
+    permission: altshield.admin
+    permission-message: You do not have permission to use this command.
+permissions:
+  altshield.admin:
+    description: Allows admin to reload AltShield configuration
+    default: op
+  altshield.bypass:
+    description: Allows a player to bypass the alt account restriction
+    default: false
