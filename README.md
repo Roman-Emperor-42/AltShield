@@ -61,10 +61,10 @@ messages:
 - ✅ IP Whitelist System
 
 ## 📸 Screenshots
-![Screenshot 1](https://media.discordapp.net/attachments/1350825813578088459/1351932487344984064/image.png?format=webp&quality=lossless)
-![Screenshot 2](https://media.discordapp.net/attachments/1350825813578088459/1351932209354899497/image.png?format=webp&quality=lossless)
-![Screenshot 3](https://media.discordapp.net/attachments/1350825813578088459/1351932102861652031/image.png?format=webp&quality=lossless)
-![Screenshot 4](https://media.discordapp.net/attachments/1351557728023347303/1351927955961413713/image.png?format=webp&quality=lossless)
+![Screenshot 1](https://media.discordapp.net/attachments/1351557728023347303/1351929070421807155/image.png?ex=67dc2990&is=67dad810&hm=d07018e46dc8701efb1d90800a08fe7e2f7166ce75a92884d6a1751947946a93&=&format=webp&quality=lossless)
+![Screenshot 2](https://media.discordapp.net/attachments/1351557728023347303/1351929124503031871/image.png?ex=67dc299c&is=67dad81c&hm=3e04f9a7650406e4503141131ef317140bae445148ef91912d95f5f5621a257a&=&format=webp&quality=lossless)
+![Screenshot 3](https://media.discordapp.net/attachments/1351557728023347303/1351929330820710410/image.png?ex=67dc29ce&is=67dad84e&hm=98fdc0c6f4e41321e71eb16e15fe43ddc25308d4a2e728ab1cc1114cc9c17c21&=&format=webp&quality=lossless)
+![Screenshot 4](https://media.discordapp.net/attachments/1351557728023347303/1351932422660554783/image.png?ex=67dc2caf&is=67dadb2f&hm=da65a110559faf44b66d5473ed5e5b8d88afb5b60003ae010da206076f104aee&=&format=webp&quality=lossless)
 
 ## 🔗 Links
 - [GitHub Repository](https://github.com/AkaTriggered/AltShield)
