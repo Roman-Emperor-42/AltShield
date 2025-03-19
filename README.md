@@ -60,6 +60,12 @@ messages:
 - ✅ Web Dashboard for Monitoring
 - ✅ IP Whitelist System
 
+## 📸 Screenshots
+![Screenshot 1](https://media.discordapp.net/attachments/1350825813578088459/1351932487344984064/image.png?format=webp&quality=lossless)
+![Screenshot 2](https://media.discordapp.net/attachments/1350825813578088459/1351932209354899497/image.png?format=webp&quality=lossless)
+![Screenshot 3](https://media.discordapp.net/attachments/1350825813578088459/1351932102861652031/image.png?format=webp&quality=lossless)
+![Screenshot 4](https://media.discordapp.net/attachments/1351557728023347303/1351927955961413713/image.png?format=webp&quality=lossless)
+
 ## 🔗 Links
 - [GitHub Repository](https://github.com/AkaTriggered/AltShield)
 - [Releases](https://github.com/AkaTriggered/AltShield/releases)
