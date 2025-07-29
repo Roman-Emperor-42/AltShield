@@ -22,10 +22,11 @@
 # AltShield Configuration
 max_accounts: 2 # Maximum accounts per IP
 max_ips: 3 # Maximum IPs per player
+count_online_only: false #Option to only count the players currently online for max accounts, requires a new database
 bypass_permission: "altshield.bypass"
 kick_message: "&cYou have reached the maximum accounts allowed on this IP!"
 messages:
-  reload: "&aAltShield configuration reloaded successfully!"\  bypass: "&e[AltShield] Allowing {player} (Has bypass permission)"
+reload: "&aAltShield configuration reloaded successfully!"\  bypass: "&e[AltShield] Allowing {player} (Has bypass permission)"
 ```
 
 ## 💾 Database

@@ -58,4 +58,18 @@ public class DatabaseManager {
             e.printStackTrace();
         }
     }
+
+    public boolean playerExists(String uuid, String ip) {
+        String query = "SELECT 1 FROM player_data WHERE uuid = ? AND ip = ? LIMIT 1;";
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
+            stmt.setString(1, uuid);
+            stmt.setString(2, ip);
+            ResultSet rs = stmt.executeQuery();
+            return rs.next();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 }

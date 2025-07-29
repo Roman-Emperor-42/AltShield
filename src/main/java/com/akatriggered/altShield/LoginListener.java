@@ -26,21 +26,40 @@ public class LoginListener implements Listener {
         }
 
         // Config settings
-        int maxAccounts = config.getInt("max_accounts", 2);
-        int maxIPs = config.getInt("max_ips", 3);
+        int maxAccounts = config.getInt("max_accounts");
+        int maxIPs = config.getInt("max_ips");
+        boolean countOnlineOnly = config.getBoolean("check_online_only");
         String kickMessageAccounts = ChatColor.translateAlternateColorCodes('&', config.getString("kick_message_accounts", "&cYou have reached the maximum accounts allowed on this IP!"));
         String kickMessageIPs = ChatColor.translateAlternateColorCodes('&', config.getString("kick_message_ips", "&cToo many accounts detected from your IP!"));
 
-        // Count accounts per IP
-        int accountCount = database.countAccountsByIP(ip);
+        plugin.getLogger().info("count_online_only in config is: " + countOnlineOnly);
 
-        // Kick if limit exceeded
-        if (accountCount >= maxAccounts) {
-            event.disallow(PlayerLoginEvent.Result.KICK_OTHER, kickMessageAccounts);
-            return;
+
+        int accountCount = 0;
+        if (countOnlineOnly) {
+            // Count only currently online accounts with same IP
+            for (Player online : plugin.getServer().getOnlinePlayers()) {
+                if (online.getAddress() != null && online.getAddress().getAddress().getHostAddress().equals(ip)) {
+                    accountCount++;
+                }
+            }
+            if (accountCount >= maxAccounts) {
+                event.disallow(PlayerLoginEvent.Result.KICK_OTHER, kickMessageAccounts);
+                return;
+            }
+            database.savePlayerData(uuid, username, ip);
+
+        } else {
+            accountCount = database.countAccountsByIP(ip);
+            boolean alreadyJoined = database.playerExists(uuid, ip);
+
+            if (!alreadyJoined && accountCount >= maxAccounts) {
+                event.disallow(PlayerLoginEvent.Result.KICK_OTHER, kickMessageAccounts);
+                return;
+            }
+            if (!alreadyJoined) {
+                database.savePlayerData(uuid, username, ip);
+            }
         }
-
-        // Save login data
-        database.savePlayerData(uuid, username, ip);
     }
 }

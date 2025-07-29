@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'com.akatriggered'
-version = '1.21'
+version = '1.21.1'
 
 repositories {
     mavenCentral()

@@ -1,8 +1,11 @@
 max_accounts: 2
 max_ips: 3
+#You must have a fresh database to change check_online_only
+check_online_only: false
 bypass_permission: "altshield.bypass"
 kick_message_accounts: "&cYou have reached the maximum accounts allowed on this IP!"
 kick_message_ips: "&cToo many accounts detected from your IP!"
+
 
 database:
   use-mysql: false
